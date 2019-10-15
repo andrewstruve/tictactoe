@@ -1,5 +1,7 @@
 package ticTacToe
 
+import "fmt"
+
 const Rows = 3
 const Columns = 3
 
@@ -12,6 +14,17 @@ func InitializeGameboard() {
 	for i = 0; i < Rows; i++ {
 		for j = 0; j < Columns; j++ {
 			Gameboard[i][j] = '-'
+		}
+	}
+}
+
+func PrintGameboard() {
+	var i int
+	var j int
+	for i = 0; i < Rows; i++ {
+		fmt.Print('\n')
+		for j = 0; j < Columns; j++ {
+			fmt.Print(Gameboard[i][j])
 		}
 	}
 }
